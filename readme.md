@@ -78,4 +78,4 @@
     - Cada categoría ademas debe ir acompañada de botones para *Edit* y *Destroy* utilizando la clases de bootstrap.
 
 - En *application.html.erb*:
-	- En una vista parcial, agregar un navbar (**fixed**) con bootstrap con los link para acceder al home (index de empresas) y agregar nueva área.
+	- En una vista parcial, agregar un navbar (**fixed**) con bootstrap con los link para acceder al home (index de categorias) y para agregar nueva categoría.
