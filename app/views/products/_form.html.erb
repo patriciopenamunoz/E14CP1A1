@@ -1,4 +1,4 @@
-<%= form_with model: [ @category, @product ] do |form| %>
+<%= form_with model:[ @category, @product ], local:true do |form| %>
   <%= form.label :name %>
   <%= form.text_field :name %>
   <%= form.label :price %>

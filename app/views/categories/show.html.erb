@@ -7,5 +7,18 @@
 
 <%= render 'products/form' %>
 
+<table>
+  <tr>
+    <td>Name</td>
+    <td>Price</td>
+  </tr>
+  <% @category.products.each do |product| %>
+  <tr>
+    <td><%= product.name %></td>
+    <td><%= product.price %></td>
+  </tr>
+  <% end %>
+</table>
+
 <%= link_to 'Edit', edit_category_path(@category) %> |
 <%= link_to 'Back', categories_path %>
