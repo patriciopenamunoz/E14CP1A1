@@ -1,3 +1,5 @@
+<p id="notice"><%= notice %></p>
+
 <h1>Showing category</h1>
 
 <p>
@@ -5,22 +7,32 @@
   <%= @category.name %>
 </p>
 
-<%= render 'products/form' %>
+<h3>Add a new product:</h3>
+<div class="well">
+  <%= render 'products/form' %>
+</div>
 
-<table>
-  <tr>
-    <td>Name</td>
-    <td>Price</td>
-    <td></td>
-  </tr>
+<h3>List of products:</h3>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+      <th></th>
+    </tr>
+  </thead>
+
   <% @category.products.each do |product| %>
-  <tr>
-    <td><%= product.name %></td>
-    <td><%= product.price %></td>
-    <td><%= link_to 'Destroy',
-                     category_product_path(@category, product),
-                     method: :delete %></td>
-  </tr>
+  <tbody>
+    <tr>
+      <td><%= product.name %></td>
+      <td><%= product.price %></td>
+      <td><%= link_to 'Destroy',
+                      category_product_path(@category, product),
+                      class:'btn btn-danger',
+                      method: :delete %></td>
+    </tr>
+  </tbody>
   <% end %>
 </table>
 

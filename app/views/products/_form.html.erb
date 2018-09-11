@@ -1,7 +1,15 @@
-<%= form_with model:[ @category, @product ], local:true do |form| %>
-  <%= form.label :name %>
-  <%= form.text_field :name %>
-  <%= form.label :price %>
-  <%= form.text_field :price %>
-  <%= form.submit 'Create product' %>
+<%= form_with model:[ @category, @product ],
+              local:true do |form| %>
+  <div class="form-group">
+    <%= form.label :name %>
+    <%= form.text_field :name, class:'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= form.label :price %>
+    <%= form.text_field :price, class:'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= form.submit class:'btn btn-primary' %>
+  </div>
+</div>
 <% end %>
